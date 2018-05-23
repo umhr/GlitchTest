@@ -88,8 +88,10 @@ package
 			//_textFieldList[0].text = text;
 			
 			
-			if (date.seconds%2 == 0) {
+			if (date.seconds%3 == 0) {
 				Glitch.type4(_bitmap.bitmapData, _capStage,new Matrix(),new ColorTransform());
+			}else if (date.seconds%3 == 1){
+				Glitch.type6(_bitmap.bitmapData, _capStage,new Matrix(),new ColorTransform());
 			}else {
 				Glitch.type8(_bitmap.bitmapData, _capStage,new Matrix(),new ColorTransform());
 			}
