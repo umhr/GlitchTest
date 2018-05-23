@@ -78,7 +78,10 @@ package
 			tempBitmapData.draw(source, matrix, colorTransform);
 			
 			target.fillRect(new Rectangle(0, 0, width, height), 0x0);
-			var w:Number = width * 0.05 * Math.sin(_count * 0.2);
+			var w:Number = width * 0.05 * Math.sin(_count * 0.15);
+			if (Math.random() < 0.5) {
+				w = width * 0.05 * Math.cos(_count * 0.15);
+			}
 			var blendMode:String = BlendMode.NORMAL;
 			var ma:Matrix = new Matrix();
 			ma.tx = -1 * w;
